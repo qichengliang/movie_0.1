@@ -1,0 +1,26 @@
+<view class='container'>
+  <view class="topgap"></view>
+
+  <view class='mainInfo'>
+    <text class="orderMovie-name">{{orderMovie.title}}</text>
+    <text class="orderMovie-time">{{orderMovie.movieTime}}</text>
+    <text class="orderMovie-cinema">{{orderMovie.cinema}}</text>
+    <text class="orderMovie-seat">{{orderMovie.movieSeat}}</text>
+    <view class='code'>
+      <text class='code-text'>验证码: {{orderMovie.code}}</text>
+    </view>
+    <canvas class='canvas' style="width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;" canvas-id='canvas' bindlongtap='save'></canvas>
+  </view>
+  <view class="gap"></view>
+
+  <view class='priceInfo'>
+    <text class='movieId'>订单号: {{orderMovie.orderId}}</text>
+    <text class='moviePrice'>总价: {{orderMovie.cost}}元</text>
+  </view>
+  <view class="gap"></view>
+
+  <view class='cinemaInfo'>
+    <text class='cinema'>{{orderMovie.cinema}}</text>
+    <text class='location'>{{orderMovie.cinemaLocation}}</text>
+  </view>
+</view>

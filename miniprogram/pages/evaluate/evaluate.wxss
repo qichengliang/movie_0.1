@@ -1,0 +1,79 @@
+.container {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+}
+
+.score {
+  height: 10rpx;
+  text-align: center;
+  line-height: 10rpx;
+  position: relative;
+  top: 50rpx;
+}
+
+.noScoreYet {
+  font-size: 28rpx;
+  color: orange;
+  font: '微软雅黑';
+  font-weight: 550;
+  letter-spacing: 5rpx;
+}
+
+.scored {
+  font-size: 48rpx;
+  color: orange;
+  font: '微软雅黑';
+  font-weight: 650;
+  letter-spacing: 5rpx;
+}
+.scoreText{
+  font-size: 30rpx;
+  color: orange;
+  font: '微软雅黑';
+  font-weight: 420;
+  letter-spacing: 5rpx;
+  position: relative;
+  top: 65rpx;
+
+}
+
+.icon {
+  position: relative;
+  top: 60px;
+}
+
+.changemotto {
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.textarea {
+  border: 3rpx solid gray;
+  background: lightyellow;
+  height: 20%;
+  width: 80%;
+  position: relative;
+  top: 305rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: gray;
+  font: '微软雅黑';
+  letter-spacing: 5rpx;
+}
+
+.limitcount {
+  color: gray;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 300rpx;
+  left: 273rpx;
+}

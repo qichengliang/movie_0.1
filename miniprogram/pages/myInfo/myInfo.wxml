@@ -1,0 +1,130 @@
+<view class='container' style="background-image: url({{ homePicUrl}}); background-size:  100%  480rpx">
+
+
+  <view>
+    <image src='photo.png' style='width:25px;height:25px' class='photo' bindtap="changebackground"></image>
+  </view>
+
+  <view class='down'>
+    <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover"></image>
+  </view>
+
+  <view class='loginshow'>
+    <text class="userinfo-nickname-logged" wx:if="{{logged}}">{{userInfo.nickName}}  </text>
+    <image wx:if='{{sex==1}}' src='sex1.png' style='width:55rpx;height:55rpx' class='sex'></image>
+    <image wx:else src='sex2.png' style='width:55rpx;height:55rpx' class='sex'></image>
+  </view>
+
+
+
+  <view class="allinfo">
+    <view class="allinfo-text">
+      <text>电话:   </text>
+      <text wx:if="{{phone}}">{{phone}}</text>
+      <modal hidden="{{hiddenmodalput}}" title="请输入手机号" confirm-text="确认" cancel-text="清空" bindcancel="cancelphone" bindconfirm="confirmphone">
+        <input type='text' placeholder="请输入" bindinput='getphone'></input>
+      </modal>
+      <image bindtap='addphone' src='../../images/intoarray.png' class='changeinfo'></image>
+    </view>
+  </view>
+
+  <view class="allinfo">
+    <view class="allinfo-text">
+      <text>年级:  </text>
+      <text wx:if="{{grade}}">{{grade}}</text>
+      <action-sheet hidden="{{actionSheetHidden2}}" bindchange="listenerActionSheet2">
+        <action-sheet-item bindtap='setgrade' data-grade='本科15级'>本科15级 </action-sheet-item>
+        <action-sheet-item bindtap='setgrade' data-grade='本科16级'>本科16级 </action-sheet-item>
+        <action-sheet-item bindtap='setgrade' data-grade='本科17级'>本科17级 </action-sheet-item>
+        <action-sheet-item bindtap='setgrade' data-grade='本科18级'>本科18级 </action-sheet-item>
+        <action-sheet-item bindtap='setgrade' data-grade='研究生16级'>研究生16级 </action-sheet-item>
+        <action-sheet-item bindtap='setgrade' data-grade='研究生17级'>研究生17级 </action-sheet-item>
+        <action-sheet-item bindtap='setgrade' data-grade='研究生18级'>研究生18级 </action-sheet-item>
+        <action-sheet-item bindtap='setgrade' data-grade='博士生'>博士生 </action-sheet-item>
+        <action-sheet-item bindtap='setgrade' data-grade='留学生'>留学生 </action-sheet-item>
+        <action-sheet-cancel>取消</action-sheet-cancel>
+      </action-sheet>
+      <image bindtap='addgrade' src='../../images/intoarray.png' class='changeinfo'></image>
+
+    </view>
+  </view>
+
+  <view class="allinfo">
+    <view class="allinfo-text">
+      <text>学院:  </text>
+      <text wx:if="{{college}}">{{college}}</text>
+      <action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet">
+        <action-sheet-item bindtap='setcollege' data-name='计算机科学与技术学院'>计算机科学与技术学院 </action-sheet-item>
+        <action-sheet-item bindtap='setcollege' data-name='自动化学院'>自动化学院</action-sheet-item>
+        <action-sheet-item bindtap='setcollege' data-name='外国语学院'>外国语学院</action-sheet-item>
+        <action-sheet-item bindtap='setcollege' data-name='通信学院'>通信学院</action-sheet-item>
+        <action-sheet-cancel>取消</action-sheet-cancel>
+      </action-sheet>
+      <image bindtap='addcollege' src='../../images/intoarray.png' class='changeinfo'></image>
+
+    </view>
+  </view>
+
+  <view class="allinfo">
+    <view class="allinfo-text-motto">
+      <text>个性签名:   </text>
+      <image bindtap='addmotto' src='../../images/intoarray.png' class='changeinfo-motto'></image>
+      <text wx:if="{{motto}}">{{motto}}</text>
+    </view>
+  </view>
+
+  <view class="allinfo">
+    <view class="allinfo-text-score">
+      <text>评级：</text>
+      <text bindtap='scoreinfo' class='knowmore'>了解更多</text>
+
+      <view  wx:if="{{creditstar==1}}">
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+      </view>
+
+      <view wx:elif="{{creditstar==2}}">
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+
+      </view>
+
+      <view wx:elif="{{creditstar==3}}">
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+      </view>
+
+      <view wx:elif="{{creditstar==4}}">
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestar.png' style='width:15px;height:15px'></image>
+      </view>
+
+
+      <view wx:elif="{{creditstar==5}}">
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+        <image src='scorestarlighted.png' style='width:15px;height:15px'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="allinfo">
+    <view class="allinfo-text">
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,188 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+
+.topgap {
+  height: 15rpx;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+.gap {
+  height: 25rpx;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  height: 780rpx;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: left;
+  transition: all 300ms ease;
+}
+
+.priceInfo {
+  display: flex;
+  flex-direction: column;
+  height: 130rpx;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: left;
+  transition: all 300ms ease;
+}
+
+.cinemaInfo {
+  display: flex;
+  flex-direction: column;
+  height: 130rpx;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: left;
+  transition: all 300ms ease;
+}
+
+.orderMovie-name {
+  font-size: 35rpx;
+  color: black;
+  font: '微软雅黑';
+  font-weight: 580;
+  letter-spacing: 5rpx;
+  padding-bottom: 12px;
+  position: relative;
+  left: 25rpx;
+  top: 25rpx;
+}
+
+.orderMovie-time {
+  font-size: 27rpx;
+  color: #ff4500;
+  font: '微软雅黑';
+  font-weight: 480;
+  letter-spacing: 2rpx;
+  padding-bottom: 7px;
+  position: relative;
+  left: 25rpx;
+  top: 25rpx;
+}
+
+.orderMovie-seat {
+  font-size: 27rpx;
+  color: black;
+  font: '微软雅黑';
+  font-weight: 480;
+  letter-spacing: 2rpx;
+  padding-bottom: 5px;
+  position: relative;
+  left: 25rpx;
+  top: 25rpx;
+}
+
+.orderMovie-cinema {
+  font-size: 27rpx;
+  color: black;
+  font: '微软雅黑';
+  font-weight: 480;
+  letter-spacing: 2rpx;
+  padding-bottom: 5px;
+  position: relative;
+  left: 25rpx;
+  top: 25rpx;
+}
+
+.code {
+  width: 95%;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 50rpx;
+  align-items: center;
+  left: 22rpx;
+}
+
+.code-text {
+  font-size: 33rpx;
+  color: grey;
+  font: '微软雅黑';
+  font-weight: 510;
+  letter-spacing: 2rpx;
+  position: relative;
+  left: 3rpx;
+}
+
+code-QRcode {
+  font-size: 33rpx;
+  color: grey;
+  font: '微软雅黑';
+  font-weight: 510;
+  letter-spacing: 2rpx;
+  position: relative;
+  left: 3rpx;
+}
+
+.canvas {
+  margin: 40rpx auto;
+  position: relative;
+  top: 70rpx;
+}
+
+.movieId {
+  font-size: 28rpx;
+  color: black;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 2rpx;
+  position: relative;
+  left: 20rpx;
+  top: 20rpx;
+  padding-bottom: 5px;
+}
+
+.moviePrice {
+  font-size: 28rpx;
+  color: black;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 2rpx;
+  position: relative;
+  left: 20rpx;
+  top: 20rpx;
+}
+
+.cinema {
+  font-size: 28rpx;
+  color: black;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 2rpx;
+  position: relative;
+  left: 20rpx;
+  top: 20rpx;
+  padding-bottom: 5px;
+}
+
+.location {
+  font-size: 30rpx;
+  color: gray;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 2rpx;
+  position: relative;
+  left: 20rpx;
+  top: 20rpx;
+}

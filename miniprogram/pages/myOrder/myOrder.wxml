@@ -1,0 +1,40 @@
+<view class='container'>
+  <view class="head">
+    <text class='head-text'>未完成</text>
+  </view>
+  <view class="lists" wx:for="{{orderMovies.unfinished}}" wx:key="item.mid" data-mid="{{item.mid}}" bindtap='orderdetails'>
+
+    <image class="moviecover" src="../../images/movies/cover.webp"></image>
+
+    <view class="introduce">
+      <text class="introduce-name">{{item.title}}  {{item.ordernum}}张</text>
+      <text class="introduce-time">{{item.movieTime}}</text>
+      <text class="introduce-cinema">{{item.cinema}}</text>
+      <text class="introduce-seat">{{item.movieSeat}}</text>
+    </view>
+
+    <view class="cost">
+      <text class="cost-text">总价：{{item.cost}}元</text>
+    </view>
+
+  </view>
+
+  <view class="head">
+    <text class='head-text'>已完成</text>
+  </view>
+  <view class="lists" wx:for="{{orderMovies.finished}}" wx:key="item.mid" data-mid="{{item.mid}}" bindtap='orderdetails'>
+
+    <image class="moviecover" src="../../images/movies/cover.webp"></image>
+    <view class="introduce">
+      <text class="introduce-name">{{item.title}}  {{item.ordernum}}张</text>
+      <text class="introduce-time">{{item.movieTime}}</text>
+      <text class="introduce-cinema">{{item.cinema}}</text>
+      <text class="introduce-seat">{{item.movieSeat}}</text>
+    </view>
+
+    <view class="cost">
+      <text class="cost-text">总价：{{item.cost}}元</text>
+    </view>
+
+  </view>
+</view>

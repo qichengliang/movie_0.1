@@ -1,0 +1,145 @@
+<view class='container'>
+  <view class='mainInfo'>
+    <view class='pic'>
+      <image class="moviecover" src="../../images/movies/cover.webp"></image>
+    </view>
+    <view class='info'>
+      <text class="movieDetail-name">{{movieDetail.title}}</text>
+      <text class="movieDetail-score">{{movieDetail.score}}</text>
+      <view>
+        <text class="infoclass">类型: </text>
+        <text class="movieDetail-movieClass">{{movieDetail.movieClass}}</text>
+      </view>
+
+      <view>
+        <text class="infoclass">主演: </text>
+        <text class="movieDetail-actor">{{movieDetail.actor}}</text>
+      </view>
+      <view>
+        <text class="infoclass">制片地区: </text>
+        <text class="movieDetail-country">{{movieDetail.country}}</text>
+      </view>
+      <view>
+        <text class="infoclass">上映时间: </text>
+        <text class="movieDetail-onShowTime">{{movieDetail.onShowTime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='opt'>
+    <view wx:if="{{willingToWatch==false}}" class='opt1' bindtap='willToWatch'>
+      <text class='optText'>我想看</text>
+    </view>
+    <view wx:elif="{{willingToWatch==true}}" class='opt1-tapped'>
+      <text class='optText'>已想看</text>
+    </view>
+    <view wx:if="{{scored==false}}" class='opt2' bindtap='scored'>
+      <text class='optText'>写影评</text>
+    </view>
+    <view wx:elif="{{scored==true}}" class='opt2-tapped'>
+      <text class='optText'>已评论</text>
+    </view>
+  </view>
+
+  <view class="long-dec {{isFold?'hide':'show'}}">
+    <text class='introduce-head'>影片简介:</text>
+    <image class="arrow" src=" {{isFold?'../../images/down.png':'../../images/up.png'}}" bindtap="showAll"></image>
+    <text class="long-dec-text">
+        {{movieDetail.introduce}}
+      </text>
+  </view>
+  <view class="gap2"></view>
+
+  <view class='actor'>
+    <text class='actor-head'>演职人员:</text>
+    <view class='actor-content'>
+      <scroll-view scroll-x="true">
+        <view class="item-content" wx:for="{{actor}}" wx:for-item="item">
+          <image class="profile" src='{{item.profile}}'></image>
+          <view class="name">{{item.name}}</view>
+          <view class="role">{{item.role}}</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="gap2"></view>
+
+  <view class='boxOffice'>
+    <text class='boxOffice-head'>票房:</text>
+    <view class='boxOffice-content'>
+      <view class='boxOffice-detail'>
+        <text class='boxOffice-detail-num'>1</text>
+        <text class='boxOffice-detail-item'>昨日票房排行</text>
+      </view>
+      <view class='boxOffice-detail'>
+        <text class='boxOffice-detail-num'>8004</text>
+        <text class='boxOffice-detail-item'>首周票房(万)</text>
+      </view>
+      <view class='boxOffice-detail'>
+        <text class='boxOffice-detail-num'>21450</text>
+        <text class='boxOffice-detail-item'>累计票房(万)</text>
+      </view>
+    </view>
+  </view>
+  <view class="gap2"></view>
+
+  <view class='comments'>
+    <text class='comments-head'>观众评论:</text>
+    <view class='comments-head-saysth'>
+      <text class='comments-head-saysth-text' bindtap='shortcomment'> 写短评  </text>
+    </view>
+
+
+    <view class="comments-content" wx:for="{{comments}}" wx:for-item="item">
+      <view>
+        <image class="comments-list-profie" src="{{item.userProfile}}"></image>
+        <text class="comments-list-name">{{item.userName}}</text>
+        <view wx:if="{{item.score==1}}">
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+        </view>
+        <view wx:if="{{item.score==2}}">
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+        </view>
+        <view wx:elif="{{item.score==3}}">
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+        </view>
+        <view wx:elif="{{item.score==4}}">
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{starPath}}" class='icon'></image>
+        </view>
+        <view wx:elif="{{item.score==5}}">
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+          <image src="{{staredPath}}" class='icon'></image>
+        </view>
+
+      </view>
+
+      <view class="comments-content-discuss">
+        <text class="comments-list-name">{{item.userComment}}</text>
+      </view>
+
+      <text class="comments-list-date">{{item.commentDate}}</text>
+
+    </view>
+
+
+  </view>
+
+</view>

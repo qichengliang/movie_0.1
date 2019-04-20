@@ -1,0 +1,27 @@
+
+<view class='container'>
+  <view class="head">
+    <text class='head-text'>想看{{newWillingMovies.length}}部电影</text>
+  </view>
+  <view class="lists" wx:for="{{newWillingMovies}}" wx:key="item.mid" bindtap="details" data-mid="{{item.mid}}">
+
+    <image class="moviecover" src="../../images/movies/cover.webp"></image>
+
+    <view class="introduce">
+      <text class="introduce-name">{{item.title}}</text>
+      <text class="introduce-class">{{item.movieClass}}</text>
+      <view class="introduce-actor" wx:if="{{item.actor.length<15}}">
+        <text>主演：{{item.actor}}</text>
+      </view>
+      <view class="introduce-actor" wx:if="{{item.actorShort.length>=15}}">
+        <text>主演：{{item.actorShort}}...</text>
+      </view>
+
+      <text class="introduce-score">评分：{{item.score}}</text>
+    </view>
+
+    <view class="movieDetail">
+      <text class="movieDetail-text">详情</text>
+    </view>
+  </view>
+</view>

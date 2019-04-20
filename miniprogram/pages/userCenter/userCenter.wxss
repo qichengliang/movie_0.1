@@ -1,0 +1,120 @@
+page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.down {
+  position: relative;
+  top: 146rpx;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background: no-repeat;
+  height: 100%;
+}
+
+.Options {
+  position: relative;
+  top: 130rpx;
+  height: auto;
+  width: 100%;
+  padding: 0 0 0 40rpx;
+  margin: 5rpx;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.Options-text {
+  border-top: 4px, outset, black;
+  width: 100%;
+  line-height: 52px;
+  font-size: 30rpx;
+  color: gray;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 5rpx;
+  position: relative;
+  left: 28rpx;
+}
+
+.userinfo-avatar {
+  width: 230rpx;
+  height: 230rpx;
+  
+  border-radius: 50%;
+}
+
+.userInfoShow {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 20rpx;
+  top: 48rpx;
+}
+
+.userinfo-nickname {
+  display: flex;
+  flex-direction: row;
+  font-size: 35rpx;
+  color: black;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 5rpx;
+  position: relative;
+  bottom: 80rpx;
+  left: 45rpx;
+}
+
+.class {
+  position: relative;
+  top: 380rpx;
+  height: auto;
+  width: 100%;
+  padding: 0 0 0 40rpx;
+  margin: 20rpx;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.arrow {
+  position: relative;
+  left: 410rpx;
+  width: 14px;
+  height: 14px;
+}
+
+.arrow2 {
+  position: relative;
+  left: 375rpx;
+  width: 14px;
+  height: 14px;
+}
+
+.icon {
+  position: relative;
+  top: 5px;
+}
+
+.class2 {
+  font-size: 32rpx;
+  color: gray;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 5rpx;
+}
+
+.seximg {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 55rpx;
+  bottom: 82rpx;
+}

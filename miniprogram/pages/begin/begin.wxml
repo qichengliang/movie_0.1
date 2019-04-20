@@ -1,0 +1,25 @@
+<!--pages/beginlogin/beginlogin.wxml-->
+<view >
+    <view class='header'>
+        <image src='/images/background.jpg'></image>
+
+    </view>
+ 
+    <view class='content'>
+        <view>该小程序登陆需提供以下权限</view>
+        <text>·获得你的公开信息(昵称，头像等)</text>
+    </view>
+ 
+    <view class="bottom">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+    <view>
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击登陆</button>
+    </view>
+  </view>
+</view>
+

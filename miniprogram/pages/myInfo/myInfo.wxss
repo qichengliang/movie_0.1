@@ -1,0 +1,162 @@
+/* pages/info/info.wxss */
+
+page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.photo {
+  position: relative;
+  top: 420rpx;
+  left: 340rpx;
+}
+
+.down {
+  position: relative;
+  top: 220rpx;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background: no-repeat;
+  height: 100%;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: black;
+}
+
+.allinfo {
+  position: relative;
+  top: 160rpx;
+  margin-top: 80rpx;
+  height: 240rpx;
+  line-height: 240px;
+  width: 80%;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 310rpx;
+  height: 310rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: black;
+  background-color: ghostwhite;
+}
+
+.userinfo-nickname-logged {
+  font-size: 32rpx;
+  color: black;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+.allinfo {
+  height: auto;
+  padding: 0 0 0 40rpx;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.allinfo-text {
+  width: 100%;
+  height: 18rpx;
+  line-height: 18px;
+  font-size: 30rpx;
+  color: gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 5rpx;
+}
+
+.allinfo-text-motto {
+  width: 100%;
+  height: 18rpx;
+  line-height: 18px;
+  font-size: 30rpx;
+  color: gray;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 5rpx;
+}
+
+
+
+.allinfo-text-score {
+  width: 100%;
+  height: 18rpx;
+  line-height: 18px;
+  font-size: 30rpx;
+  color: gray;
+  padding-top: 20px;
+  padding-bottom: 090px;
+  font: '微软雅黑';
+  font-weight: 500;
+  letter-spacing: 5rpx;
+}
+
+.loginshow {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 200rpx;
+  left: 30rpx;
+}
+
+.sex {
+  position: relative;
+  left: 15rpx;
+  bottom: 12rpx;
+}
+
+.changeinfo {
+  position: absolute;
+  left: 565rpx;
+  line-height: 18px;
+  width: 14px;
+  height: 14px;
+}
+
+.changeinfo-motto {
+  position: absolute;
+  left: 565rpx;
+  top: 40rpx;
+  line-height: 18px;
+  width: 14px;
+  height: 14px;
+}
+
+.knowmore {
+  color: green;
+  position: absolute;
+  left: 440rpx;
+}
+
+.in-image {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 400rpx;
+}

@@ -1,0 +1,52 @@
+<view class='container' style="background-image: url( ../../images/userCenter/background.jpg); background-size:  100%  480rpx">
+
+  <view class='down'>
+    <image class="userinfo-avatar"  wx:if='{{logged==true}}'src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    
+  </view>
+  <view class='down'>
+    <view class='userInfoShow'>
+      <text class="userinfo-nickname">{{userInfo.nickName}}  </text>
+      <image class="seximg" wx:if='{{userInfo.gender==1}}' src='../../images/userCenter/sex1.png' style='width:53rpx;height:53rpx'></image>
+      <image class="seximg" wx:elif='{{userInfo.gender==2}}' src='../../images/userCenter/sex2.png' style='width:53rpx;height:53rpx'></image>
+    </view>
+  </view>
+
+
+  <view class="Options">
+    <view bindtap="myOrder">
+      <image src='../../images/userCenter/order.png' style='width:22px;height:22px ' class='icon '></image>
+      <text class="Options-text"> 我的订单 </text>
+      <image src='../../images/userCenter/intoarray.png' class='arrow'></image>
+
+    </view>
+  </view>
+
+
+  <view class="Options">
+    <view bindtap="willings">
+      <image src='../../images/userCenter/willings.png ' style='width:22px;height:22px ' class='icon '></image>
+      <text class="Options-text"> 想看的电影 </text>
+      <image src='../../images/userCenter/intoarray.png' class='arrow2'></image>
+    </view>
+  </view>
+
+  <view class="Options">
+    <view bindtap="watched">
+      <image src='../../images/userCenter/watched.png ' style='width:22px;height:22px ' class='icon '></image>
+      <text class="Options-text"> 看过的电影 </text>
+      <image src='../../images/userCenter/intoarray.png' class='arrow2'></image>
+    </view>
+  </view>
+
+  <view class="Options">
+    <view bindtap="instructions">
+      <image src='../../images/userCenter/instructions.png ' style='width:22px;height:22px ' class='icon '></image>
+      <text class="Options-text"> 使用须知 </text>
+      <image src='../../images/userCenter/intoarray.png' class='arrow'></image>
+    </view>
+  </view>
+
+
+
+</view>

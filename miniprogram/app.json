@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/begin/begin",
+    "pages/index/index",
+    "pages/userCenter/userCenter",
+    "pages/moiveDetails/moiveDetails",
+    "pages/watched/watched",
+    "pages/orderDetails/orderDetails",
+    "pages/evaluate/evaluate",
+    "pages/willings/willings",
+    "pages/instructions/instructions",
+    "pages/showing/showing",
+    "pages/myOrder/myOrder",
+    "pages/cinema/cinema"
+  ],
+  "window": {
+    "backgroundColor": "white",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "Wafer Quick Start",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/showing/showing",
+        "text": "热映",
+        "iconPath": "images/tabbar_a_u.png",
+        "selectedIconPath": "images/tabbar_a_s.png"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "text": "影院",
+        "iconPath": "images/tabbar_c_u.png",
+        "selectedIconPath": "images/tabbar_c_s.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的",
+        "iconPath": "images/tabbar_d_u.png",
+        "selectedIconPath": "images/tabbar_d_s.png"
+      }
+    ]
+  }
+}

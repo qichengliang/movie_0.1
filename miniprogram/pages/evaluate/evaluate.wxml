@@ -1,0 +1,51 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class='container'>
+
+  <view class='score'>
+
+    <view wx:if="{{score===null}}">
+      <text class='noScoreYet'>请点击星星评分</text>
+    </view>
+
+    <view wx:elif="{{score!==null}}">
+      <text class='scored'>{{score}}分</text>
+    </view>
+
+    <view class='scoreText' wx:if="{{score===1}}">
+      <text>太烂了</text>
+    </view>
+    <view class='scoreText' wx:elif="{{score===2}}">
+      <text>比较差</text>
+    </view>
+    <view class='scoreText' wx:elif="{{score===3}}">
+      <text>一般般</text>
+    </view>
+    <view class='scoreText' wx:elif="{{score===4}}">
+      <text>比较好</text>
+    </view>
+    <view class='scoreText' wx:elif="{{score===5}}">
+      <text>太赞了</text>
+    </view>
+
+
+    <view>
+      <image src="{{starPath[0]}}" style='width:30px;height:30px ' class='icon' bindtap='score1'></image>
+      <image src="{{starPath[1]}}" style='width:30px;height:30px ' class='icon' bindtap='score2'></image>
+      <image src="{{starPath[2]}}" style='width:30px;height:30px ' class='icon' bindtap='score3'></image>
+      <image src="{{starPath[3]}}" style='width:30px;height:30px ' class='icon' bindtap='score4'></image>
+      <image src="{{starPath[4]}}" style='width:30px;height:30px ' class='icon' bindtap='score5'></image>
+
+    </view>
+
+  </view>
+
+  <view class='textarea'>
+    <textarea bindconfirm='submit' bindinput='bindWordLimit' placeholder='快来说说你的看法吧！(少于100字)' maxlength='30' auto-focus='True' show-confirm-bar='True' auto-auto-height='True'></textarea>
+  </view>
+
+  <view class='limitcount'>
+    <text>{{userInputLimlt}}</text>
+  </view>
+
+
+</view>
